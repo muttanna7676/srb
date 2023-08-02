@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Best Online Food Delivery Service in India | MyOnlineMeal.com</title>
+    <style>
+/* Navigation */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+} 
+body{
+
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background: linear-gradient(45deg, #333, #faf5f9);
+  background-attachment: fixed;
+}
+ 
+
+.main{
+    width: 100px%;
+    background: linear-gradient(rgba(193, 127, 127, 0.956)50%), url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    width: 1500px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 25px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+
+
+.container{
+    margin-top: 60px;
+    width:90%;
+    height:60vh;
+    background:rgba(89, 80, 80, 0) ;
+
+}
+
+.swiper-wrapper{
+    margin-left: 80px;
+    width:70%;
+    height:70vh;
+    background-color: rgba(153, 126, 126, 0);
+display: flex;
+align-items: center;
+
+}
+#img{
+    border:none;
+    width:100%;
+    height:70vh; 
+}
+.button{
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+
+}.menu{
+    width: 600px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 120px;
+    margin-top: 27px;
+    font-size: 18px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #1b1a1a;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color:white;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+.heading{
+    margin-top:6%;
+}
+.products .product{
+    padding:1px;
+    margin-top:1%;
+    width: 15%;
+    background-color: #ff7200;
+    margin-left: 2%;
+    height:-25px;
+    display: flex;
+}
+
+.products .product:first-child{
+    margin-bottom: 2rem;
+}
+
+.products  .box{
+    background:white;
+    border-radius: .5rem;
+    text-align: left;
+    padding:3rem 3rem;
+    outline-offset: -1rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+
+.products .product .box:hover{
+    outline-offset: 0rem;
+    outline: var(--outline-hover);
+}
+
+.products .product .box img{
+    height:5rem;
+    width:150%;
+    height: 100%;
+}
+
+.products .product .box h3{
+    font-size: 2.5rem;
+    color:var(--black);
+}
+
+.products .product .box .price{
+    font-size: 1rem;
+    color:var(--light-color);
+    padding:.5rem 0;
+}
+.btn{
+    font-size: 15px;;
+}
+.box{
+    display: flex;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+} 
+
+.container{
+  position: relative;
+  width: 1150px;
+  padding:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+img{
+    width: 80%;
+     
+}
+ 
+.container .card{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius:10px;
+  box-shadow: 0px 15px 25px rgba(0,0,0,.2);
+  background-color: #fff;
+  margin: 20px;
+  overflow: hidden;
+  transition: .5s;
+}
+ 
+
+ 
+.container .card:hover{
+  filter: blur(0);
+  transform: scale(1.1);
+  opacity: 1;
+} 
+ 
+.container .card .circle{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  
+  text-align: center;
+}
+ 
+ 
+.container .card .content{
+  position: absolute;
+  bottom: 10px;
+  page-break-after: 20px;
+  text-align: center;
+  padding:20px;
+}
+ 
+.container .card .content p{
+  color: #666;
+  text-align: justify;
+  font-size: 15px;
+}
+ 
+.container .card .content a{
+  position: relative;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+padding: 10px 20px;
+  border-radius:40px;
+  margin-top: 20px;
+  text-decoration: none;
+   
+}
+ 
+.container .card:nth-child(1) .circle,
+.container .card:nth-child(1) .content a{
+  background-color:white;
+}
+ 
+.container .card:nth-child(2) .circle,
+.container .card:nth-child(2) .content a{
+  background-color:white;
+}
+ 
+.container .card:nth-child(3) .circle,
+.container .card:nth-child(3) .content a{
+  background-color:white;
+}
+.re{
+  background-color:rgb(106, 118, 106);
+  width:110%;
+  height: 40px;
+  font-size:25px;
+}
+
+</style>
+</head>
+
+<body>
+
+    
+    <div class="main">
+    <div class="navbar">
+      
+                  <div class="icon">
+                <h2 class="logo">SRB Electricals</h2>
+                  
+            
+                  
+                <div>
+ <ul>
+                    <li><a href="webprog.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contect.html">CONTACT</a></li>
+                    <li><button class="re"><a href="login.html">signin </a></li></button>      
+                    <li><button class="re"><a href="reg1.html">Registration</a></li></button>
+                </ul>
+            </div>
+            
+
+           
+
+<div class="container">
+        <!--additional required wrapper-->
+    <div class="swiper-wrapper">
+        <!--Slides-->
+        <button onclick="perv()"><</button>
+          <img id="img" src="" alt="">
+          <button onclick="next()">></button><br>
+    </div>
+  
+
+
+
+    
+        <div class="container">
+            <div class="card">
+              <div class="circle">
+                <img src="img2.jpg"><br><br>
+              </div>
+              <div class="content">
+ 
+                <p></p>
+                 
+                <a href="" style="color:red">450-</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="circle">
+                <img src="img5.jpg">
+              </div>
+              <div class="content">
+ 
+                <p> </p>
+               <button></button> <a href="" style="color:red">1800</a><button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="circle">
+               <img src="img4.jpg">
+              </div>
+              <div class="content">
+ 
+                <p></p>
+                <a href="" style="color:red">1850</a>
+              </div>
+            </div>
+            <div class="container">
+              <div class="card">
+                <div class="circle">
+                  <img src="img7.jpg">
+                </div>
+                <div class="content">
+   
+                  <p></p>
+                   
+                  <a href="" style="color:red">1 L=350-</a>
+                </div>
+              </div>
+          
+            <div class="card">
+              <div class="circle">
+                <img src="img12.jpg">
+              </div>
+              <div class="content">
+ 
+                <p></p>
+               <button></button> <a href="" style="color:red">1 pce=25-</a><button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="circle">
+               <img src="img9.jpg">
+              </div>
+              <div class="content">
+ 
+                <p></p>
+                <a href="" style="color:red">1 pice=180</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu">
+            <ul>     
+                <li><button style="background-color: chartreuse;width:100%;"><a href="reg1.html" STYLE="font-size: 40px;margin-left: 50px;margin-right: 60PX ;">GO TO BUY</a></button></li>
+            </ul>
+        </div>
+    </body>
+</html>
+
+        </div>    
+
+</div>
+<script>
+    var num =0
+    let arr = ["img1.jpg","img3.jpg","img8.jpg","img18.jpg","img20.png"]
+    let img =document.getElementById("img")
+    //console.log(img)
+    img.src=arr[num]
+     var t=setInterval(change,4000)
+    function change(){
+        num++
+        if(num>=arr.length){
+            num=0
+        }
+        img.src=arr[num]
+    }
+   function prev(){
+        num++
+        if(num>=arr.length){
+            num=0
+        }
+        img.src=arr[num]
+    }
+    function next(){
+        num--
+        if(num<0){
+            num=arr.length-1
+        }
+        img.src=arr[num]
+    }
+
+</script>
+</body>
+
+</html>

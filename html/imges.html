@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Cards</title>
+ <script
+src="https://kit.fontawesome.com/8f27d68390.js"
+ crossorigin="anonymous"
+></script>
+</head>
+
+<style type="text/css">
+
+
+*{
+ margin: 0px;
+ padding: 0px;
+}
+body{
+ font-family: arial;
+ background-color:#b4c3e0;
+}
+.main{
+
+ margin: 2%;
+}
+
+.card{
+     width: 20%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px black;
+     border-radius: 5px; 
+     margin: 2%;
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  height: 160px;
+
+ 
+ }
+
+.title{
+ 
+  text-align: center;
+  padding: 10px;
+  
+ }
+
+h1{
+  font-size: 20px;
+ }
+
+.des{
+  padding: 3px;
+  text-align: center;
+ 
+  padding-top: 10px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button{
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:10px;
+}
+button:hover{
+  background-color: black;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+#navbar {
+   overflow: hidden;
+   background: linear-gradient(20deg, #e22828, #502e1f, #f6df0f, #5e97b1);
+  background-size: 200%;
+   padding: 50px 10px;
+   transition: 0.4s;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 99;
+ }
+  
+ #navbar a {
+   float: left;
+   color: #fff;
+   text-align: center;
+   padding: 12px 20px;
+   text-decoration: none;
+   font-size: 14px; 
+   text-transform: uppercase;
+   font-weight: bold;
+   line-height: 20px;
+   border-radius: 4px;
+ }
+  
+ #navbar #logo {
+   font-size: 35px;
+   font-weight: bold;
+   transition: 0.4s;
+ }
+  
+ #navbar a:hover {
+   background-color: rgb(206, 146, 43);
+ }
+  
+ #navbar-right {
+   float: right;
+ }
+  
+ @media screen and (max-width: 580px) {
+   #navbar {
+     padding: 20px 10px !important;
+   }
+   #navbar a {
+     float: none;
+     display: block;
+     text-align: left;
+   }
+   #navbar-right {
+     float: none;
+   }
+ }
+
+
+ 
+.add-to-cart-btn{
+    width: fit-content;
+    margin:auto;
+    /* margin-top:10px; */
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: brown;
+    border-radius: 3px;
+    font-size: large;
+    color:#fff
+}
+
+
+
+
+
+
+*::after{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+:root{
+    --after-content:'2';
+}
+
+body{
+    width:100vw;
+    font-family: 'Lato', sans-serif;
+}
+header{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    height:12vh;
+    background-color: brown;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    color: #fff;
+}
+.cart-box{
+    width:26% !important;
+    position: absolute;
+    left:72%;
+    top:25%;
+    /* border:solid 1px blue; */
+    padding:10px 20px;
+}
+h2{
+    font-size: x-large;
+    padding:15px 10px;
+}
+
+.cart-wrapper{
+    overflow-y: auto;
+    max-height: 350px;
+    width:24vw;
+}
+.subtotal{
+    text-align: right;
+    padding:5%;
+}
+.checkout, .view-cart{
+    width:95%;
+    text-align: center;
+    cursor: pointer;
+    background-color: brown;
+    font-size: large;
+    color: #fff;
+    margin:10px auto;
+    padding:10px 15px;
+}
+.view-cart{
+    background-color: #fff;
+    border: 2px solid brown;
+    color: brown;
+}
+.cart-icon{
+    text-align: right;
+}
+
+.cart-item{
+  display:grid;
+  grid-template-columns: 3fr 6fr 1fr;
+  padding:5% 2%;
+  border-bottom:solid 1px lightgray;  
+}
+
+.cart-item img{
+    width:100%;
+}
+.cart-item .details{
+    padding-left:10%;
+}
+
+.cart-item h3{
+  text-align: left; 
+  margin-bottom:5%; 
+}
+
+.cart-item .price{
+display: block;
+text-align: right;
+margin-top: 35%; 
+  }
+  
+ .quantity{
+     display: block;
+     margin-top:5%;
+ } 
+
+ .fa-window-close{
+     color: brown;
+ }
+ .cancel{
+     text-align: right;
+ }
+ .whole-cart-window{
+     border: solid lightgray 1px;
+     border-top:none;
+     position: fixed;
+     top:12vh;
+     background-color: #fff;
+     margin-right:2%;
+ }
+
+ .hide{
+     display: none;
+ }
+.non-empty::after{
+  content: var(--after-content);
+  font-size: 25px;
+  width:25px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top:-20px;
+  right:20%;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-item{
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    height:600px;
+    justify-content: center;
+    align-items: center;
+}
+.card-item img{
+    width:45%;
+}
+.card-item .details{
+    text-align: center;    
+}
+.card-item p,.card-item h3 {
+    margin-top:10px;   
+}
+.card-item span{
+    display: block;
+    margin-top:10px;
+}
+.add-to-cart-btn{
+    width: fit-content;
+    margin:auto;
+    /* margin-top:10px; */
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: brown;
+    border-radius: 3px;
+    font-size: large;
+    color:#fff
+}
+</style>
+<body> 
+   <header>
+   </div> <a href="index.html" style="color:aqua">
+        
+         <span Style="margin-left:-200px;">HOME</span>
+      </a>
+   </div>
+
+   <div>
+   <h1 style="margin-left: -300px;">Shop Online</h1>
+</div>
+ </header>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br><br>
+  
+<div class="card">
+
+<div class="image">
+ <img src="../images/imgE3.jpg" height="200px">
+</div>
+<div class="title">
+   <a href ="index.html">Hardware Pipes</a>
+</div>
+
+
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="../images/imgE4.jpg" height="200px">
+</div>
+<div class="title">
+ <h1>
+Write title Here</h1>
+</div>
+
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="../images/imgE5.jpg" height="200px">
+</div>
+<div class="title">
+ <h1>
+Write title Here</h1>
+</div>
+
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="../images/imgE6.jpg" height="200px">
+</div>
+<div class="title">
+ <h1>
+Write title Here</h1>
+</div>
+
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="../images/imgE7.jpg" height="200px">
+</div>
+<div class="title">
+ <h1>
+Write title Here</h1>
+</div>
+
+
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="../images/imgE8.jpg" height="200px">
+</div>
+<div class="title">
+ <h1>
+Write title Here</h1>
+</div>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="../images/imgE9.jpg">
+</div>
+<div class="title">
+ <h1>
+Write title Here</h1>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+
+    <div class="image">
+       <img src="../images/imgE10.jpg" height="240px">
+    </div>
+    <div class="title">
+     <h1>
+    Write title Here</h1>
+    </div>
+    
+    </div>
+    </div>
+    <!--cards -->
+    
+    
+    <div class="card">
+    
+    <div class="image">
+       <img src="../images/imgE11.jpg">
+    </div>
+    <div class="title">
+     <h1>
+    Write title Here</h1>
+    </div>
+    
+    </div>
+    </div>
+    <!--cards -->
+    
+    
+    <div class="card">
+    
+    <div class="image">
+       <img src="../images/imgE12.jpg" height="240px">
+    </div>
+    <div class="title">
+     <h1>
+    Write title Here</h1>
+    </div>
+
+    </div>
+    </div>
+    <!--cards -->
+    
+    
+    <div class="card">
+    
+    <div class="image">
+       <img src="../images/imgE13.jpg">
+    </div>
+    <div class="title">
+     <h1>
+    Write title Here</h1>
+    </div>
+    <div class="des">
+     
+    </div>
+    </div>
+    <!--cards -->
+    
+    
+    <div class="card">
+    
+    <div class="image">
+       <img src="../images/imgE14.jpg">
+    </div>
+    <div class="title">
+     <h1>
+    Write title Here</h1>
+    </div>
+   
+    </div>
+    </div>
+    <!--cards -->
+    
+    <div class="card">
+    
+    <div class="image">
+       <img src="../images/imgE15.jpg" height="240px">
+    </div>
+    <div class="title">
+     <h1>
+    Write title Here</h1>
+    </div>
+    
+    </div>
+    </div>
+    <!--cards -->
+    
+    <div class="card">
+    
+    <div class="image">
+       <img src="../images/imgE16.jpg" height="240px">
+    </div>
+    <div class="title">
+     <h1>
+    Write title Here</h1>
+    </div>
+
+    
+    </div>
+    </div>
+    <!--cards -->
+    
+    
+    <div class="card">
+    
+    <div class="image">
+       <img src="../images/imgE17.jpg" height="240px">
+    </div>
+    <div class="title">
+     <h1>
+    Write title Here</h1>
+    </div>
+   
+    </div>
+    </div>
+    <!--cards -->
+    
+    
+    <div class="card">
+    
+    <div class="image">
+       <img src="../images/imgG1.jpg">
+    </div>
+    <div class="title">
+     <h1>
+    Write title Here</h1>
+    </div>
+
+    </div>
+    </div>
+       <!--cards -->
+    
+    
+       <div class="card">
+    
+        <div class="image">
+           <img src="../images/imgG2.jpg">
+        </div>
+        <div class="title">
+         <h1>
+        Write title Here</h1>
+        </div>
+    
+        </div>
+        </div>
+           <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG3.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG4.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG5.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG6.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG7.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG8.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG9.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG10.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG11.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG12.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG13.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG14.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG19.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+         <!--cards -->
+    
+    
+    <div class="card">
+    
+      <div class="image">
+         <img src="../images/imgG20.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Write title Here</h1>
+      </div>
+  
+      </div>
+      </div>
+       
+  
+      </div>
+      </div>
+      
+      <script src="script.js"></script>
+</div>
+</body>
+</html>
